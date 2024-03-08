@@ -71,7 +71,7 @@
 
 const menu = [
   {
-    title: "Estado",
+    title: "Estadoos",
     icon: "img/icon/Hidalgo.svg",
     items: [
       { name: "Información Básica", id: "chkInfoGenHGO" },
@@ -154,9 +154,12 @@ const menu = [
 
 // Función para generar el HTML del menú
 function generateMenuHTML(menuData) {
+  // Iniciar la construcción del HTML del menú
   let html = '<ul class="nav-links">';
-  
+
+  // Iterar sobre las categorías del menú
   menuData.forEach(category => {
+    // Agregar la estructura HTML de cada categoría
     html += `<li>
       <div class="iocn-link">
         <img src="${category.icon}" alt="${category.title}">
@@ -165,10 +168,12 @@ function generateMenuHTML(menuData) {
       </div>
       <ul class="sub-menu">`;
 
+    // Iterar sobre los elementos de la categoría
     category.items.forEach(item => {
+      // Verificar si el elemento tiene subelementos
       if (item.subItems) {
-        html += `<li class="link_name">${item.name}</li>
-          <li class="menu-dropdown">
+        // Agregar la estructura HTML de los subelementos al submenú
+        html += `<li class="menu-dropdown">
             <div>
               <div class="contenedor">
                 <p class="titulo_sub">${item.name}</p>
@@ -189,10 +194,12 @@ function generateMenuHTML(menuData) {
             </li>`;
         });
 
+        // Cerrar la estructura HTML de los subelementos y del submenú
         html += `</ul>
             </div>
           </li>`;
       } else {
+        // Si el elemento no tiene subelementos, agregarlo como una opción simple
         html += `<li class="SidebarCheckbox">
             <input type="checkbox" id="${item.id}" name="check" value="" />
             <label for="${item.id}">
@@ -203,10 +210,12 @@ function generateMenuHTML(menuData) {
       }
     });
 
+    // Cerrar la estructura HTML de la categoría
     html += `</ul>
       </li>`;
   });
 
+  // Cerrar la estructura HTML del menú
   html += `</ul>`;
   
   return html;
