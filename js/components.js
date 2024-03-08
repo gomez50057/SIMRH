@@ -17,7 +17,11 @@ const closeIcon = document.getElementById('close-icon');
 logo.addEventListener('click', () => form.classList.toggle('expanded'));
 closeIcon.addEventListener('click', () => form.classList.remove('expanded'));
 
-
+// Definición del sistema de referencia de coordenadas (CRS) en formato EPSG:4326 (latitud y longitud)
+const crs84 = new L.Proj.CRS('EPSG:4326', '+title=CRS84 +proj=longlat +datum=WGS84 +no_defs', {
+  resolutions: Array.from({ length: 22 }, (_, i) => 2 ** (21 - i)),
+  bounds: L.latLngBounds([-90, -180], [90, 180])
+});
 
 var map = L.map('map').setView([20.44819465937593, -98.41534285830343], 8,);
 map.attributionControl.setPrefix(''); // Esto elimina cualquier texto de atribución
@@ -56,6 +60,54 @@ var baseMaps = {
   "Google Relieve": rel,
   "Google Carreteras": carret,
 };
+
+
+// Definición de control personalizado para mostrar y copiar las coordenadas
+L.Control.CoordProjection = L.Control.extend({
+  
+
+  onAdd: function (map) {
+    const container = L.DomUtil.create('div', 'leaflet-control-coord-projection');
+    L.DomEvent.disableClickPropagation(container); // Evita la propagación de eventos de clic dentro del contenedor
+    container.innerHTML = 'Lat: <span id="lat"></span> | Lng: <span id="lng"></span>';
+    // Evento para copiar las coordenadas al portapapeles cuando se hace clic derecho en el control
+    container.addEventListener('contextmenu', this._copyCoordinatesToClipboard.bind(this));
+    // Evento para actualizar las coordenadas mostradas en el control al mover el cursor sobre el mapa
+    map.on('mousemove', this._updateCoordinates.bind(this));
+    return container;
+  },
+
+  // Método para copiar las coordenadas al portapapeles
+  _copyCoordinatesToClipboard: function (event) {
+    event.preventDefault(); // Evita el comportamiento predeterminado del evento (por ejemplo, abrir el menú contextual)
+
+    const lat = document.getElementById('lat').textContent;
+    const lng = document.getElementById('lng').textContent;
+    const coords = `${lat}, ${lng}`;
+    navigator.clipboard.writeText(coords).then(() => {
+      console.log('Coordenadas copiadas al portapapeles: ' + coords);
+      alert('Coordenadas copiadas al portapapeles: ' + coords);
+    }).catch(err => {
+      console.error('Error al copiar las coordenadas: ', err);
+      alert('Error al copiar las coordenadas. Intente nuevamente.');
+    });
+  },
+
+  // Método para actualizar las coordenadas mostradas en el control
+  _updateCoordinates: function (e) {
+    this._container.querySelector('#lat').textContent = e.latlng.lat.toFixed(7);
+    this._container.querySelector('#lng').textContent = e.latlng.lng.toFixed(7);
+  }
+});
+
+// Función para crear una instancia del control de coordenadas con las opciones dadas
+L.control.coordProjection = function (options) {
+  return new L.Control.CoordProjection(options);
+};
+
+// Añade el control de coordenadas al mapa
+L.control.coordProjection().addTo(map);
+
 
 //Se agrega un Control de mapas base
 var layerControl = L.control.layers(baseMaps, null, { collapsed: false, position: 'bottomleft' }).addTo(map);
@@ -222,17 +274,17 @@ function initMap() {
   map.on('draw:created', function (e) {
     var layer = e.layer;
     editableLayers.addLayer(layer);
-  
+
     // Añadir medidas a la forma creada
     if (layer instanceof L.Polygon || layer instanceof L.Polyline) {
       layer.showMeasurements();
     } else if (layer instanceof L.Circle) {
       layer.showMeasurements();
     }
-  
+
     addDownloadIcon();  // Añade el ícono después de crear una forma
   });
-  
+
 
   // Baja más la barra ajustando el estilo
   var drawContainer = document.querySelector('.leaflet-draw.leaflet-control');
@@ -1006,7 +1058,7 @@ layers.forEach(function (layerInfo) {
 });
 
 
-var marker; 
+var marker;
 function initialize() {
   var searchTypeSelector = document.getElementById('search-type-selector');
   var coordinatesInput = document.getElementById('coordinates-input');

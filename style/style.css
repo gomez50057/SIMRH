@@ -193,8 +193,14 @@ body {
   height: auto;
 }
 
+.sidebar.close li h2 {
+  text-align: center;
+}
+
+
 .sidebar.close .nav-links li .link_name {
-  opacity: 0;
+  opacity: 1;
+  font-size: 9px;
 }
 
 .sidebar .nav-links li .sub-menu {

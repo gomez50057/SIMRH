@@ -38,6 +38,11 @@
   <link rel="stylesheet" href="style/leaflet-measure-path.css" />
   <script src="js/leaflet-measure-path.js"></script>
 
+  <!-- coordenadas -->
+  <link rel="stylesheet" href="style/coord-projection.css"/>
+
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/proj4js/2.6.0/proj4.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/proj4leaflet/1.0.2/proj4leaflet.min.js"></script>
 
 
   <!-- Boxiocns CDN Link -->
@@ -55,8 +60,8 @@
       <div class="logo_name"><img src="img/PrimeroPueblo.png" alt="Logo de gobierno de Hidalgo "></div>
     </div>
 
+    <!-- Menu -->
     <div id="menu-container"></div>
-
     <script src="js/elem-menu.js"></script>
 
 
@@ -71,6 +76,7 @@
     </div>
   </div>
 
+  <!-- Simbologia -->
   <div class="tablas-contenedor">
     <!-- PMDU_PMDUYOT -->
     <div id="PMDU_PMDUYOT" class="PMDU_PMDUYOT tabla">
@@ -107,9 +113,9 @@
       <table></table>
     </div>
   </div>
-
   <script src="js/tablas.js"></script>
 
+  <!-- Mapa -->
   <section class="MapaSection">
     <button class="obtenerUbicacion" id="obtenerUbicacionBtn"> <i class='bx bx-current-location '></i></button>
     <div id="map"></div>

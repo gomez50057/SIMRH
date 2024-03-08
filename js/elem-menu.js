@@ -71,7 +71,7 @@
 
 const menu = [
   {
-    title: "Estadoos",
+    title: "Estados",
     icon: "img/icon/Hidalgo.svg",
     items: [
       { name: "Información Básica", id: "chkInfoGenHGO" },
@@ -146,7 +146,7 @@ const menu = [
           { name: "Etapas de Crecimiento", id: "chkZMP_PDUyOT_EC" },
           { name: "Polígonos de Actuación", id: "chkZMP_PDUyOT_PA" }
         ]
-      }
+      },
     ]
   }
 ];
@@ -217,7 +217,7 @@ function generateMenuHTML(menuData) {
 
   // Cerrar la estructura HTML del menú
   html += `</ul>`;
-  
+
   return html;
 }
 
