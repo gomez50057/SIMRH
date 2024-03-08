@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Sistema de Información Metropolitana y Regional de Hidalgo</title>
+  <!-- Css -->
+  <link rel="stylesheet" type="text/css" href="style/style.css">
+
+  <!-- Favicons -->
+  <link href="img/icono.png" rel="icon">
+
+  <!-- Js -->
+  <script src="capas/capas.js"></script>
+  <script src="capas/capa02.js"></script>
+  <script src="capas/capa03.js"></script>
+  <script src="capas/Hidalgo-PMDU_PMDUYOT.js"></script>
+
+
+  <!-- leaflet -->
+  <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.min.css" rel="stylesheet">
+
+  <!-- Agrega el CSS y JS de Leaflet.markercluster -->
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet.markercluster@1.5.3/dist/MarkerCluster.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.min.js"></script> -->
+
+  <!-- leaflet.draw -->
+  <script src="https://unpkg.com/leaflet-draw@1.0.4/dist/leaflet.draw.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/1.0.4/leaflet.draw.css" />
+
+  <!-- leaflet.BigImage -->
+  <link rel="stylesheet" href="style/Leaflet.BigImage.min.css">
+  <script src="js/Leaflet.BigImage.min.js"></script>
+
+  <!-- leaflet.BigImage -->
+  <link rel="stylesheet" href="style/leaflet-measure-path.css" />
+  <script src="js/leaflet-measure-path.js"></script>
+
+
+
+  <!-- Boxiocns CDN Link -->
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<!-- <body oncontextmenu="return false;"> -->
+
+<body>
+  <div class="sidebar close">
+    <div class="logo-details">
+      <img class="logo" src="img/sidebarLogo.png" alt="Logo de gobierno de Hidalgo ">
+      <div class="logo_name"><img src="img/PrimeroPueblo.png" alt="Logo de gobierno de Hidalgo "></div>
+    </div>
+
+    <div id="menu-container"></div>
+
+    <script src="js/elem-menu.js"></script>
+
+
+    <!-- Banner -->
+    <div class="profile-details">
+      <div class="profile-content">
+        <img src="img/icon/Hidalgo.svg" alt="profileImg">
+      </div>
+      <div class="banner">
+        <img src="img/icon/banner.svg" alt="Banner de Hidalgo">
+      </div>
+    </div>
+  </div>
+
+  <div class="tablas-contenedor">
+    <!-- PMDU_PMDUYOT -->
+    <div id="PMDU_PMDUYOT" class="PMDU_PMDUYOT tabla">
+      <h3>SIMBOLOGÍA</h3>
+      <p>PMDU PMDUYOT</p>
+      <table></table>
+    </div>
+    <!-- Población AGEB -->
+    <div id="legend" class="legend tabla">
+      <h3>SIMBOLOGÍA</h3>
+      <p>Población por AGEB</p>
+      <table></table>
+    </div>
+    <!-- SIMBOLOGÍA Imagen Objetivo -->
+    <div id="ImgObjetivo" class="ImgObjetivo tabla">
+      <h3>SIMBOLOGÍA <br> Imagen Objetivo</h3>
+      <table></table>
+    </div>
+    <!-- SIMBOLOGÍA Zonificación Primaria -->
+    <div id="ZonP" class="ZonP tabla">
+      <h3>SIMBOLOGÍA <br> Zonificación Primaria</h3>
+      <table></table>
+    </div>
+    <!-- SIMBOLOGÍA Etapas de Crecimiento -->
+    <div id="EtapaCrecimiento" class="EtapaCrecimiento tabla">
+      <h3>SIMBOLOGÍA <br>
+        Etapas de Crecimiento</h3>
+      <table></table>
+    </div>
+    <!-- SIMBOLOGÍA Polígonos de Actuación -->
+    <div id="PoligonosActuacion" class="PoligonosActuacion tabla">
+      <h3>SIMBOLOGÍA <br>
+        Polígonos de Actuación</h3>
+      <table></table>
+    </div>
+  </div>
+
+  <script src="js/tablas.js"></script>
+
+  <section class="MapaSection">
+    <button class="obtenerUbicacion" id="obtenerUbicacionBtn"> <i class='bx bx-current-location '></i></button>
+    <div id="map"></div>
+    <div class="autocomplete-container">
+      <form id="form">
+        <img id="logo" class="logo_google" src="img/google.png" alt="">
+        <div class="container_input">
+          <label for="search-type-selector">Tipo de búsqueda:</label>
+          <select id="search-type-selector">
+            <option value="address">Buscar por Dirección</option>
+            <option value="coordinates">Buscar por Coordenadas</option>
+          </select>
+        </div>
+        <input type="text" id="coordinates-input" placeholder="Ingrese coordenadas (latitud, longitud)"
+          style="display: none;">
+        <input type="text" id="autocomplete-input" placeholder="Ingresa la direccion o lugar">
+        <svg id="close-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#000000"
+          stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18" />
+          <line x1="6" y1="6" x2="18" y2="18" />
+        </svg>
+      </form>
+    </div>
+  </section>
+
+  <script src="js/components.js"></script>
+  <script src="js/script.js"></script>
+</body>
+
+</html>
