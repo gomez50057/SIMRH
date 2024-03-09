@@ -18,10 +18,13 @@ logo.addEventListener('click', () => form.classList.toggle('expanded'));
 closeIcon.addEventListener('click', () => form.classList.remove('expanded'));
 
 // Definición del sistema de referencia de coordenadas (CRS) en formato EPSG:4326 (latitud y longitud)
-const crs84 = new L.Proj.CRS('EPSG:4326', '+title=CRS84 +proj=longlat +datum=WGS84 +no_defs', {
-  resolutions: Array.from({ length: 22 }, (_, i) => 2 ** (21 - i)),
-  bounds: L.latLngBounds([-90, -180], [90, 180])
-});
+const crs84 = new L.Proj.CRS('EPSG:4326',
+  '+title=CRS84 +proj=longlat +datum=WGS84 +no_defs',
+  {
+    resolutions: Array.from({ length: 22 }, (_, i) => 2 ** (21 - i)),
+    bounds: L.latLngBounds([-90, -180], [90, 180])
+  }
+);
 
 var map = L.map('map').setView([20.44819465937593, -98.41534285830343], 8,);
 map.attributionControl.setPrefix(''); // Esto elimina cualquier texto de atribución
@@ -60,53 +63,59 @@ var baseMaps = {
   "Google Relieve": rel,
   "Google Carreteras": carret,
 };
+ 
 
-
-// Definición de control personalizado para mostrar y copiar las coordenadas
+// Define the CoordProjection control
 L.Control.CoordProjection = L.Control.extend({
-  
-
   onAdd: function (map) {
     const container = L.DomUtil.create('div', 'leaflet-control-coord-projection');
-    L.DomEvent.disableClickPropagation(container); // Evita la propagación de eventos de clic dentro del contenedor
+    L.DomEvent.disableClickPropagation(container);
+
     container.innerHTML = 'Lat: <span id="lat"></span> | Lng: <span id="lng"></span>';
-    // Evento para copiar las coordenadas al portapapeles cuando se hace clic derecho en el control
-    container.addEventListener('contextmenu', this._copyCoordinatesToClipboard.bind(this));
-    // Evento para actualizar las coordenadas mostradas en el control al mover el cursor sobre el mapa
+
     map.on('mousemove', this._updateCoordinates.bind(this));
+
     return container;
   },
 
-  // Método para copiar las coordenadas al portapapeles
-  _copyCoordinatesToClipboard: function (event) {
-    event.preventDefault(); // Evita el comportamiento predeterminado del evento (por ejemplo, abrir el menú contextual)
+  _updateCoordinates: function (e) {
+    this._lat = e.latlng.lat.toFixed(7);
+    this._lng = e.latlng.lng.toFixed(7);
+    this._container.querySelector('#lat').textContent = this._lat;
+    this._container.querySelector('#lng').textContent = this._lng;
+  },
 
-    const lat = document.getElementById('lat').textContent;
-    const lng = document.getElementById('lng').textContent;
-    const coords = `${lat}, ${lng}`;
+  // Método para copiar las coordenadas al portapapeles
+  _copyCoordinatesToClipboard: function () {
+    const coords = `${this._lat}, ${this._lng}`;
+
+    // Copia las coordenadas al portapapeles
     navigator.clipboard.writeText(coords).then(() => {
       console.log('Coordenadas copiadas al portapapeles: ' + coords);
-      alert('Coordenadas copiadas al portapapeles: ' + coords);
+      alert('Copiado en el portapapeles: ' + coords);
     }).catch(err => {
       console.error('Error al copiar las coordenadas: ', err);
       alert('Error al copiar las coordenadas. Intente nuevamente.');
     });
-  },
-
-  // Método para actualizar las coordenadas mostradas en el control
-  _updateCoordinates: function (e) {
-    this._container.querySelector('#lat').textContent = e.latlng.lat.toFixed(7);
-    this._container.querySelector('#lng').textContent = e.latlng.lng.toFixed(7);
   }
 });
 
-// Función para crear una instancia del control de coordenadas con las opciones dadas
+// Crear una instancia del control de coordenadas
 L.control.coordProjection = function (options) {
   return new L.Control.CoordProjection(options);
 };
 
-// Añade el control de coordenadas al mapa
-L.control.coordProjection().addTo(map);
+// Añadir el control de coordenadas al mapa con el CRS definido
+var coordControl = L.control.coordProjection({ crs: crs84 }).addTo(map);
+
+// Initialize a context menu for the entire page
+var contextMenu = CtxMenu();
+
+// Add an item to the menu
+contextMenu.addItem("Copiar coordenadas", function () {
+  // Llama a la función para copiar las coordenadas al portapapeles desde el control de coordenadas
+  coordControl._copyCoordinatesToClipboard();
+});
 
 
 //Se agrega un Control de mapas base

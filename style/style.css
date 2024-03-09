@@ -744,3 +744,16 @@ body {
   width: 420px;
   height: 40px;
 }
+
+
+.leaflet-container .leaflet-control-coord-projection {
+  background-color: rgba(255, 255, 255, 0.7);
+  position: absolute;
+  right: 92px;
+  top: calc(100vh - 32px);
+  box-shadow: 0 0 5px #bbb;
+  padding: 0 5px;
+  margin: 0;
+  color: #333;
+  font: 11px/1.5 "Helvetica Neue", Arial, Helvetica, sans-serif;
+}
