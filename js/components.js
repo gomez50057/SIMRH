@@ -65,6 +65,47 @@ var baseMaps = {
 };
  
 
+
+
+// Initialize a context menu for the entire page
+var contextMenu = CtxMenu();
+
+// Add an item to the menu
+contextMenu.addItem("Copiar coordenadas", function () {
+  // Llama a la función para copiar las coordenadas al portapapeles desde el control de coordenadas
+  coordControl._copyCoordinatesToClipboard();
+});
+
+// Función para mostrar el menú contextual personalizado
+function showCustomContextMenu(e) {
+  e.preventDefault(); // Evita el menú contextual por defecto del navegador
+  contextMenu.openMenu(e.pageX, e.pageY); // Abre el menú contextual personalizado en la posición del evento
+}
+
+
+// Asignar el evento contextmenu a todo el documento para mostrar el menú contextual personalizado
+document.addEventListener('contextmenu', function (e) {
+  showCustomContextMenu(e);
+});
+
+// Asignar el evento click a todo el documento para cerrar el menú contextual personalizado cuando se hace clic en otra parte
+document.addEventListener('click', function () {
+  contextMenu.closeMenu();
+});
+
+// Asignar el evento resize a la ventana para cerrar el menú contextual personalizado cuando cambia el tamaño de la ventana
+window.addEventListener('resize', function () {
+  contextMenu.closeMenu();
+});
+
+// Asignar el evento contextmenu a las capas para mostrar el menú contextual personalizado cuando se hace clic en ellas
+map.eachLayer(function (layer) {
+  layer.on('contextmenu', function (e) {
+    showCustomContextMenu(e);
+  });
+});
+
+
 // Define the CoordProjection control
 L.Control.CoordProjection = L.Control.extend({
   onAdd: function (map) {
@@ -108,14 +149,11 @@ L.control.coordProjection = function (options) {
 // Añadir el control de coordenadas al mapa con el CRS definido
 var coordControl = L.control.coordProjection({ crs: crs84 }).addTo(map);
 
-// Initialize a context menu for the entire page
-var contextMenu = CtxMenu();
 
-// Add an item to the menu
-contextMenu.addItem("Copiar coordenadas", function () {
-  // Llama a la función para copiar las coordenadas al portapapeles desde el control de coordenadas
-  coordControl._copyCoordinatesToClipboard();
-});
+
+
+
+
 
 
 //Se agrega un Control de mapas base
